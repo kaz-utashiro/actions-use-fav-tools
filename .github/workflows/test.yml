@@ -14,15 +14,16 @@ jobs:
       matrix:
         os:
           - os: ubuntu-latest
-            tools:  apt perl python
+            tools:  apt
+#            tools:  apt perl python
             apt:    bmake
-            perl:   App::ansiecho
-            python: legit
-          - os: macos-latest
-            tools:  brew perl python
-            brew:   rcs
-            perl:   App::ansiecho
-            python: legit
+#            perl:   App::ansiecho
+#            python: legit
+#          - os: macos-latest
+#            tools:  brew perl python
+#            brew:   rcs
+#            perl:   App::ansiecho
+#            python: legit
     runs-on: ${{ matrix.os.os }}
     steps:
       - uses: actions/checkout@v2
@@ -31,9 +32,9 @@ jobs:
         with:
           cache:  workflow
           apt:    ${{ matrix.os.apt }}
-          brew:   ${{ matrix.os.brew }}
-          perl:   ${{ matrix.os.perl }}
-          python: ${{ matrix.os.python }}
+#          brew:   ${{ matrix.os.brew }}
+#          perl:   ${{ matrix.os.perl }}
+#          python: ${{ matrix.os.python }}
       - run: (cd __test__; ./run.sh ${{ matrix.os.tools }})
       - run: |
           : check cache-hit
@@ -53,15 +54,16 @@ jobs:
       matrix:
         os:
           - os: ubuntu-latest
-            tools:  apt perl python
+            tools:  apt
+#            tools:  apt perl python
             apt:    bmake
-            perl:   App::ansiecho
-            python: legit
-          - os: macos-latest
-            tools:  brew perl python
-            brew:   rcs
-            perl:   App::ansiecho
-            python: legit
+#            perl:   App::ansiecho
+#            python: legit
+#          - os: macos-latest
+#            tools:  brew perl python
+#            brew:   rcs
+#            perl:   App::ansiecho
+#            python: legit
     runs-on: ${{ matrix.os.os }}
     steps:
       - uses: actions/checkout@v2
@@ -70,9 +72,9 @@ jobs:
         with:
           cache:  workflow
           apt:    ${{ matrix.os.apt }}
-          brew:   ${{ matrix.os.brew }}
-          perl:   ${{ matrix.os.perl }}
-          python: ${{ matrix.os.python }}
+#          brew:   ${{ matrix.os.brew }}
+#          perl:   ${{ matrix.os.perl }}
+#          python: ${{ matrix.os.python }}
       - run: (cd __test__; ./run.sh ${{ matrix.os.tools }})
       - run: |
           : check cache-hit
