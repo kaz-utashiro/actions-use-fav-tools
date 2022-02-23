@@ -1,14 +1,14 @@
 # actions-use-any-tools
 
-![actions-use-any-tools](https://github.com/office-tecoli/actions-use-any-tools/actions/workflows/test.yml/badge.svg)
+![actions-use-any-tools](https://github.com/tecoli-com/actions-use-any-tools/actions/workflows/test.yml/badge.svg)
 
 This GitHub action is a quick interface to use other `use-*-tools`
 actions.  Currently
-[`apt`](https://github.com/office-tecoli/actions-use-apt-tools),
-[`brew`](https://github.com/office-tecoli/actions-use-brew-tools),
-[`perl`](https://github.com/office-tecoli/actions-use-perl-tools)
+[`apt`](https://github.com/tecoli-com/actions-use-apt-tools),
+[`brew`](https://github.com/tecoli-com/actions-use-brew-tools),
+[`perl`](https://github.com/tecoli-com/actions-use-perl-tools)
 and
-[`python`](https://github.com/office-tecoli/actions-use-python-tools)
+[`python`](https://github.com/tecoli-com/actions-use-python-tools)
 tools are supported.  Common parameters `cache` and `key` can be
 set through this action.  If you want to use other parameters, use
 individual action direct.
@@ -30,7 +30,7 @@ individual action direct.
 #   perl-cache-hit: cache status of perl action
 #   python-cache-hit: cache status of python action
 
-- uses: office-tecoli/actions-use-any-tools@v0
+- uses: tecoli-com/actions-use-any-tools@v0
   with:
 
     # apt tools
@@ -61,7 +61,7 @@ individual action direct.
 ## Example
 
 ```yaml
-- uses: office-tecoli/actions-use-any-tools@v0
+- uses: tecoli-com/actions-use-any-tools@v0
   with:
     apt:    bmake
     brew:   rcs cvs
@@ -70,7 +70,7 @@ individual action direct.
 ```
 
 ```yaml
-- uses: office-tecoli/actions-use-any-tools@v0
+- uses: tecoli-com/actions-use-any-tools@v0
   with:
     apt: >-
       bmake
@@ -87,4 +87,4 @@ individual action direct.
 
 ## See Also
 
-### [office-tecoli/actions](https://github.com/office-tecoli/actions)
+### [tecoli-com/actions](https://github.com/tecoli-com/actions)
